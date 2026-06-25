@@ -20,7 +20,7 @@ Proporcióname los comandos exactos de terminal para macOS para instalar y ejecu
 
 **Solucionar el error de Tkinter en Mac:** Resolver el fallo de ejecución (`ModuleNotFoundError: No module named '_tkinter'`) instalando los componentes gráficos que le faltaban a Python en macOS.
 
-**EVIDENCIA DE MEJORA**
+# EVIDENCIA DE MEJORA
 
 **ESTADO INICIAL**
 
@@ -55,6 +55,16 @@ No es la primera vez que pruebo hacer Vibecoding, siempre aprendo algo nuevo, ya
 
 **VENTAJAS:** Siento que la mayor ventaja fue la optimización del proyecto como tal, con el prompt bien detallado el asistente logro comprender de inmediato y traducir mi idea hacia el código, en algunas ocasiones el agente divago, pero por eso use el criterio personal también para realizar las correciones correctas.
 
-De igual forma 
+De igual forma aunque use el criterio personal para corregir algunas errores o indicaciones, el asistente me ayudo bastante a ahorrar tiempo identificando y optimizando errores por su propia cuenta.
+
+**LIMITES:** La IA asumió que mi entorno de Python tenía instaladas todas las librerías base (como Tkinter). Siento que el Vibecoding puede crear una falsa sensación de que todo funcionará a la primera, hasta que topas con las limitaciones reales del hardware o del sistema operativo del usuario.
+
+**¿QUÉ PARTES DEL CÓDIGO COMPRENDO Y CUÁLES CREO QUE PUEDO MEJOR?**
+
+**COMPRENDÍ PERFECTAMENTE**
+La estructura del sistema de archivos y recursos, Entendí muy bien que el código no podía tener rutas fijas (como usar barras inclinadas / o \) porque eso rompería el juego al cambiar de computadora o al compilarlo. Valide de inmediato la necesidad de usar una función automatizada con os.path.join y variables del sistema para que el evaluador no tuviera problemas al abrir la carpeta images.
+
+**NECESITO MEJORAR**
+El bloque de renderizado del menú principal, esa fue la zona con más iteraciones de diseño. Tuve que solicitar reestructurar por completo la carga de imágenes para sustituir los widgets tradicionales (tk.Button/tk.Label) por el método Canvas.create_image, calculando las coordenadas exactas en el eje vertical ($y$) para eliminar los fondos grises y controlar el espacio entre los botones.
 
 
